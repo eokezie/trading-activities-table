@@ -1,38 +1,163 @@
-import { useState } from "react";
-import reactLogo from "./assets/react.svg";
 import "./App.css";
+import TableComponent from "./TableComponent";
 
 function App() {
-  const [count, setCount] = useState(0);
+  const tradingActivities = [
+    {
+      _id: "6523e86d332894d3f84bd492",
+      symbolCode: "NDDCPB25S67",
+      open: 50.5,
+      high: 51.75,
+      highQty: 7500,
+      low: 51.75,
+      lowQty: 7500,
+      deal: 1,
+      totalQty: 7500,
+      totalValue: 388125,
+      close: 51.75,
+      percentChange: 2.4752475247524752,
+      dateCreated: "2023-10-09",
+    },
+    {
+      _id: "652562bc9f52c44491dffa3a",
+      symbolCode: "ZENTPB24S65",
+      open: 15.5,
+      high: 15.5,
+      highQty: 0,
+      low: 15.5,
+      lowQty: 0,
+      deal: 0,
+      totalQty: 0,
+      totalValue: 0,
+      close: 15.5,
+      percentChange: 0,
+      dateCreated: "2023-10-09",
+    },
+    {
+      _id: "652562bc9f52c44491dffa3b",
+      symbolCode: "ROBXPB26S66",
+      open: 26.7,
+      high: 26.7,
+      highQty: 0,
+      low: 26.7,
+      lowQty: 0,
+      deal: 0,
+      totalQty: 0,
+      totalValue: 0,
+      close: 26.7,
+      percentChange: 0,
+      dateCreated: "2023-10-09",
+    },
+    {
+      _id: "65256583d53a783a3029f70b",
+      symbolCode: "NDDCPB25S67",
+      open: 50.5,
+      high: 50.5,
+      highQty: 0,
+      low: 50.5,
+      lowQty: 0,
+      deal: 0,
+      totalQty: 0,
+      totalValue: 0,
+      close: 50.5,
+      percentChange: 0,
+      dateCreated: "2023-10-06",
+    },
+    {
+      _id: "65256583d53a783a3029f70c",
+      symbolCode: "ZENTPB24S65",
+      open: 15.5,
+      high: 15.5,
+      highQty: 0,
+      low: 15.5,
+      lowQty: 0,
+      deal: 0,
+      totalQty: 0,
+      totalValue: 0,
+      close: 15.5,
+      percentChange: 0,
+      dateCreated: "2023-10-06",
+    },
+    {
+      _id: "65256583d53a783a3029f70d",
+      symbolCode: "ROBXPB26S66",
+      open: 26.7,
+      high: 26.7,
+      highQty: 0,
+      low: 26.7,
+      lowQty: 0,
+      deal: 0,
+      totalQty: 0,
+      totalValue: 0,
+      close: 26.7,
+      percentChange: 0,
+      dateCreated: "2023-10-06",
+    },
+    {
+      _id: "652566012bce86fd87befa95",
+      symbolCode: "NDDCPB25S67",
+      open: 50.5,
+      high: 50.5,
+      highQty: 0,
+      low: 50.5,
+      lowQty: 0,
+      deal: 0,
+      totalQty: 0,
+      totalValue: 0,
+      close: 50.5,
+      percentChange: 0,
+      dateCreated: "2023-10-05",
+    },
+    {
+      _id: "652566012bce86fd87befa96",
+      symbolCode: "ZENTPB24S65",
+      open: 15.5,
+      high: 15.5,
+      highQty: 0,
+      low: 15.5,
+      lowQty: 0,
+      deal: 0,
+      totalQty: 0,
+      totalValue: 0,
+      close: 15.5,
+      percentChange: 0,
+      dateCreated: "2023-10-05",
+    },
+    {
+      _id: "652566012bce86fd87befa97",
+      symbolCode: "ROBXPB26S66",
+      open: 26.7,
+      high: 26.7,
+      highQty: 0,
+      low: 26.7,
+      lowQty: 0,
+      deal: 0,
+      totalQty: 0,
+      totalValue: 0,
+      close: 26.7,
+      percentChange: 0,
+      dateCreated: "2023-10-05",
+    },
+    {
+      _id: "652566bd76537f7aff09b80b",
+      symbolCode: "NDDCPB25S67",
+      open: 50.5,
+      high: 50.5,
+      highQty: 0,
+      low: 50.5,
+      lowQty: 0,
+      deal: 0,
+      totalQty: 0,
+      totalValue: 0,
+      close: 50.5,
+      percentChange: 0,
+      dateCreated: "2023-10-04",
+    },
+  ];
 
   return (
     <div className="App">
-      <div>
-        <a href="https://reactjs.org" target="_blank" rel="noreferrer">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-        <a href="https://vitejs.dev" target="_blank" rel="noreferrer">
-          <img src="/vite.svg" className="logo" alt="Vite logo" />
-        </a>
-      </div>
-      <h1>React + Vite</h1>
-      <h2>On CodeSandbox!</h2>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR.
-        </p>
-
-        <p>
-          Tip: you can use the inspector button next to address bar to click on
-          components in the preview and open the code in the editor!
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <TableComponent tradingActivities={tradingActivities} />
     </div>
   );
 }
